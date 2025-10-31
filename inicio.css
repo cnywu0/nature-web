@@ -1,0 +1,109 @@
+:root {
+    --texto: #C2C5AA;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+body {
+    background-image: url('img/fondo.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+@font-face {
+    font-family: 'Natural';
+    src: url('fonts/Natural.otf')
+}
+h1 {
+    font-size: 92px;
+    text-shadow: 10px 6px 1px #000000;
+    color: var(--texto);
+    margin-bottom: 10px;
+    font-family: 'Natural';
+}
+.marco {
+    background-image: url('img/marco-flores.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recuadro {
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    margin: 200px auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: var(--texto);
+    position: relative;
+}
+.color{
+    background-image: url('img/madera.jpg');
+    width: 470px;
+    height: 570px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.botones-derecha {
+    position: absolute;
+    left: calc(50% + 300px);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 2;
+}
+.catalogo{
+    background-image: url('img/Productos.png');
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+.contacto {
+    background-image: url('img/Contacto.png');
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+.catalogo:hover, .contacto:hover {
+    transform: scale(1.1);
+}
+.catalogo:active {
+    cursor: grabbing;
+}
+.catalogo-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contacto:active {
+    cursor: grabbing;
+}
+.contacto-link {
+    text-decoration: none;
+    cursor: pointer;
+}
