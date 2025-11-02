@@ -1,0 +1,90 @@
+body {
+    background-image: url(imgCatalogo/Fondo.jpg);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100vh;  
+}
+
+.cartel-seccion {
+    position: relative;
+    text-align: center;
+    margin-top: -80px;  /* Increased negative margin to reduce space */
+    margin-bottom: -60px;  /* Increased negative margin to reduce space */
+}
+
+.cartel-seccion img {
+    max-width: 280px;  /* Slightly smaller header image */
+}
+
+.cartel-seccion h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Natural', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.botones-izquierda {
+    position: fixed;
+    left: 5%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    z-index: 2;
+}
+
+.inicio {
+    background-image: url('imgCatalogo/Inicio.png');
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.contacto {
+    background-image: url('imgCatalogo/Contacto.png');
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio:hover, .contacto:hover {
+    transform: scale(1.1);
+}
+
+.inicio:active, .contacto:active {
+    cursor: grabbing;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;  /* Reduced gap between products */
+    padding: 0 20px;
+    max-width: 900px;  /* Increased max-width for larger products */
+    margin: -100px auto 0;  /* Increased negative margin to reduce space from top */
+    height: calc(100vh - 100px);  /* Adjusted height */
+}
+
+.producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 280px;  /* Increased product size */
+    margin: 0 auto;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

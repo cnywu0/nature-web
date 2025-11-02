@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "Natural";
+    src: url("fonts/Natural.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("imagenesContacto/fondo.jpg") center/cover no-repeat fixed;
+    font-family: "Natural", sans-serif;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenido-contacto {
+    position: relative;
+    width: 95%;
+    max-width: 1400px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-contacto {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.piedra-contacto {
+    background: url("imagenesContacto/Piedra.png") no-repeat center/100% 100%;
+    width: 550px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 11; 
+    transform: translateY(-130px); /* La subimos para que quede encima del marco */
+}
+
+.titulo-contacto {
+    font-size: 3em;
+    color: #E0E0E0;
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 5px;
+    position: relative;
+    top: 10px;
+}
+
+.formulario-container {
+    position: relative;
+    width: 600px;
+    padding: 60px 40px;
+    border-radius: 40px;
+    z-index: 8;
+    margin: 100px auto 0 auto;
+    overflow: visible;
+}
+
+.borde-ramitas {
+    background: url("imagenesContacto/MarcoFormulario.png") no-repeat center/contain;
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    width: calc(100% + 240px);
+    height: calc(100% + 240px);
+    z-index: 9;
+    pointer-events: none;
+    filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.4)); /* Añade profundidad al borde */
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+    padding: 30px 40px;
+    border-radius: 30px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #333;
+    font-size: 1.1em;
+    outline: none;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+.formulario button {
+    background-color: #6B8E23;
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    width: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario button:hover {
+    background-color: #8AC34A;
+    transform: scale(1.05);
+}
+
+.botones-izquierda {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 10;
+}
+
+.home-icon,
+.productos-icon {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+
+.home-icon {
+    background-image: url("imagenesContacto/Inicio.png");
+}
+
+.productos-icon {
+    background-image: url("imagenesContacto/Productos.png");
+}
+
+.home-icon:hover,
+.productos-icon:hover {
+    transform: scale(1.05);
+}
+
+.personaje-derecha {
+    background: url("imagenesContacto/BrrBrrPataPin.png") no-repeat center/contain;
+    width: 400px;
+    height: 700px;
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
